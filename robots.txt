@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-# Replace the example URL after publishing:
-Sitemap: https://YOUR-SITE-URL/sitemap.xml
+
+Sitemap: https://dakshthdhumal1421-cmyk.github.io/vidyapath-site/sitemap.xml
