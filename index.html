@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vidyapath is a free learning hub with study notes, exam resources and useful student tools.">
+  <meta name="theme-color" content="#102a43">
+  <title>Vidyapath — Learn Better, Every Day</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Vidyapath home"><span class="brand-mark">V</span><span>vidyapath</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a href="#resources">Study Resources</a>
+      <a href="#tools">Free Tools</a>
+      <a href="#about">About</a>
+      <button class="btn btn-outline" id="loginBtn">Log in</button>
+      <button class="btn btn-primary" id="signupBtn">Sign up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR LEARNING SPACE</span>
+        <h1>Learn smarter.<br><span>Achieve more.</span></h1>
+        <p>Free study resources and simple student tools to help you prepare with confidence.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#resources">Explore resources <span aria-hidden="true">→</span></a>
+          <a class="btn btn-light" href="#tools">Try free tools</a>
+        </div>
+        <div class="hero-note"><span class="dot"></span> Free to explore · Made for students across India</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="book book-back"></div><div class="book book-front"><span>LEARN</span><b>✦</b></div>
+        <div class="floating-card card-top">✎ <span>Study notes</span></div>
+        <div class="floating-card card-bottom">✓ <span>Progress starts here</span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Website benefits">
+      <div><strong>01</strong><span>Simple study resources</span></div>
+      <div><strong>02</strong><span>Useful student tools</span></div>
+      <div><strong>03</strong><span>Mobile-friendly learning</span></div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="section-heading">
+        <div><span class="eyebrow">LEARNING LIBRARY</span><h2>Find your next topic</h2><p>Start with these sample categories. Add your own verified notes and materials later.</p></div>
+      </div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="resourceSearch" type="search" placeholder="Search subjects or resources..." aria-label="Search resources"><kbd>Search</kbd></label>
+      <div class="resource-grid" id="resourceGrid">
+        <article class="resource-card" data-search="computer science programming coding notes">
+          <div class="resource-icon purple">⌘</div><span class="card-tag">COMPUTER SCIENCE</span><h3>Programming & Computing</h3><p>Build your foundations with clear topic-wise learning material.</p><a href="#about" class="text-link">Explore category →</a>
+        </article>
+        <article class="resource-card" data-search="database dbms sql notes">
+          <div class="resource-icon blue">▤</div><span class="card-tag">DATABASES</span><h3>DBMS & SQL</h3><p>Revise database concepts, terminology and query basics.</p><a href="#about" class="text-link">Explore category →</a>
+        </article>
+        <article class="resource-card" data-search="exam preparation revision questions">
+          <div class="resource-icon orange">✎</div><span class="card-tag">EXAM PREP</span><h3>Exam Preparation</h3><p>Organise revision topics and practise important concepts.</p><a href="#about" class="text-link">Explore category →</a>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No matching categories. Try another search.</p>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-heading">
+        <div><span class="eyebrow">QUICK & USEFUL</span><h2>Free tools for students</h2><p>Try the tools right here — no account needed.</p></div>
+      </div>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-heading"><div class="tool-icon">％</div><div><h3>Percentage Calculator</h3><p>Calculate marks percentage</p></div></div>
+          <label for="marksObtained">Marks obtained</label><input id="marksObtained" type="number" min="0" placeholder="e.g. 420">
+          <label for="totalMarks">Total marks</label><input id="totalMarks" type="number" min="1" placeholder="e.g. 500">
+          <button class="btn btn-primary full" id="calcPercentage">Calculate percentage</button>
+          <div class="result" id="percentageResult" aria-live="polite">Your result will appear here.</div>
+        </article>
+        <article class="tool-card">
+          <div class="tool-heading"><div class="tool-icon green">✓</div><div><h3>Study Checklist</h3><p>Make a quick revision plan</p></div></div>
+          <form id="taskForm" class="task-form"><input id="taskInput" type="text" maxlength="100" placeholder="Add a study task..." aria-label="Study task"><button class="btn btn-primary" type="submit">Add</button></form>
+          <ul id="taskList" class="task-list"><li class="muted-task">Your tasks will appear here.</li></ul>
+          <button class="btn btn-outline full" id="clearTasks">Clear checklist</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section" id="about">
+      <div><span class="eyebrow">KEEP MOVING FORWARD</span><h2>Small steps. Stronger learning.</h2><p>Vidyapath is a starter project for a student-focused education platform. More subjects and resources can be added as the library grows.</p></div>
+      <a class="btn btn-light" href="#resources">Browse resources →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span>vidyapath</span></a>
+    <p>© <span id="year"></span> Vidyapath. Learning starts with one step.</p>
+    <div><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+  </footer>
+
+  <dialog id="authDialog" class="auth-dialog">
+    <form method="dialog" class="dialog-close"><button aria-label="Close dialog">×</button></form>
+    <span class="eyebrow">VIDYAPATH ACCOUNT</span><h2 id="authTitle">Welcome back</h2>
+    <p id="authMessage">Account login is not connected yet.</p>
+    <p class="dialog-note">This starter version does not collect or store passwords. Before launching real accounts, connect a secure authentication provider such as Supabase and configure access rules.</p>
+    <button class="btn btn-primary full" id="dialogOk">Got it</button>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
